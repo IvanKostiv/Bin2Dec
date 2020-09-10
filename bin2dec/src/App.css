@@ -1,7 +1,59 @@
-@import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(
+    111.6deg,
+    rgba(73, 235, 221, 1) -0%,
+    rgba(83, 222, 219, 1) 7.1%,
+    rgba(105, 191, 217, 1) 13.4%,
+    rgba(127, 157, 214, 1) 18%,
+    rgba(155, 113, 208, 1) 23.9%,
+    rgba(178, 73, 201, 1) 28.8%,
+    rgba(200, 45, 192, 1) 33.3%,
+    rgba(213, 42, 180, 1) 38%,
+    rgba(232, 44, 145, 1) 44.2%,
+    rgba(239, 45, 128, 1) 52.4%,
+    rgba(249, 66, 107, 1) 59.7%,
+    rgba(252, 105, 98, 1) 67.3%,
+    rgba(252, 105, 98, 1) 74.4%,
+    rgba(254, 145, 92, 1) 82.2%,
+    rgba(255, 189, 86, 1) 88.2%,
+    rgba(254, 227, 80, 1) 92.8%,
+    rgba(254, 248, 75, 1) 98.4%
+  );
+}
+
+.form-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form-background div {
+  width: 30vw;
+  background-color: #fff;
+  border-radius: 0.7rem;
+  padding: 2.5rem;
+  box-shadow: 0 0 10px #626262;
+}
+
+.form-wrapper {
+  width: 30vw;
+  background-color: #fff;
+  border-radius: 0.7rem;
+  padding: 2.5rem;
+  box-shadow: 0 0 10px #626262;
+}
 
 .App {
   text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .App-header {
@@ -18,4 +70,3 @@
 .App-link {
   color: #61dafb;
 }
-
