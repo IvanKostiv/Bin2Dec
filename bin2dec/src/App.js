@@ -4,41 +4,29 @@ import "./App.css";
 
 const { Title } = Typography;
 
-const layout = {
-  labelCol: { span: 4 },
-  wrapperCol: { span: 16 },
-};
-const tailLayout = {
-  wrapperCol: { offset: 8, span: 7 },
-};
-
 class App extends Component {
-  state = {
-    decimal: "",
-  };
-
   formRef = React.createRef();
 
   convertBinToDec = (values) => {
-    let binaryNumberString = values.bin;
-    let decimal = Number.parseInt(binaryNumberString, 2);
-    this.formRef.current.setFieldsValue({ dec: decimal });
+    this.formRef.current.setFieldsValue({
+      dec: Number.parseInt(values.bin, 2),
+    });
   };
 
   render() {
     return (
       <div className="App">
         <Form
-          {...layout}
           ref={this.formRef}
           className="form-wrapper"
           name="bin2dec"
+          layout="vertical"
           onFinish={this.convertBinToDec}
           requiredMark={false}
         >
           <Title level={2}>Bin2Dec</Title>
           <Form.Item
-            label="Bin"
+            label="Binary:"
             name="bin"
             hasFeedback
             rules={[
@@ -58,11 +46,11 @@ class App extends Component {
           >
             <Input placeholder="binary number" />
           </Form.Item>
-          <Form.Item label="Dec" name="dec">
+          <Form.Item label="Decimal:" name="dec">
             <Input placeholder="decimal number" readOnly={true} />
           </Form.Item>
 
-          <Form.Item {...tailLayout}>
+          <Form.Item>
             <Button type="primary" htmlType="submit">
               convert
             </Button>
